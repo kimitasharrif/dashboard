@@ -1,0 +1,12 @@
+/* container styliing */
+.container{
+    width: 100vw;
+    margin-left: 20vw;
+    margin-right: 0;
+    background-color: antiquewhite;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    top: 60px;
+    position: relative;
+}

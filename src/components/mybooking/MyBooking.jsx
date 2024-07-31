@@ -1,10 +1,18 @@
 import React from 'react'
 import './mybooking.css'
+import Layout from '../layout/Layout'
+
 
 const MyBooking = () => {
   return (
     <div>
-      This is my booking
+    <Layout/>
+
+
+    <section className="container">
+      <h1>My Booking</h1>
+      
+    </section>
     </div>
   )
 }

@@ -10,12 +10,12 @@ import LabTests from './components/labtests/LabTests'
 import MyBooking from './components/mybooking/MyBooking'
 import NotFound from './components/notfound/NotFound'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TopBar from './components/topbar/TopBar'
+
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <TopBar/>
+      
       <Routes>
          <Route index element={<MainContent />} />
          <Route path="signin" element={<Signin />} />

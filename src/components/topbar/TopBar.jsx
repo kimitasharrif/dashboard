@@ -2,7 +2,6 @@ import React from 'react'
 import './topbar.css'
 import { AiFillCalendar ,AiOutlineAppstore} from 'react-icons/ai'
 import { IoMdNotifications } from "react-icons/io";
-import { PiWindowsLogoBold } from "react-icons/pi";
 import { CgProfile } from "react-icons/cg";
 
 

@@ -1,10 +1,18 @@
 import React from 'react'
 import './addtests.css'
+import Layout from '../layout/Layout'
 
 const AddTests = () => {
   return (
+    
     <div>
-      Add tests here
+    <Layout/>
+
+
+    <section className="container">
+      <h1>Add tests here</h1>
+      
+    </section>
     </div>
   )
 }
