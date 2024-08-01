@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './signup.css'
 import axiosInstance from '../../helpers/axiosInstance';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -32,7 +33,7 @@ const Signup = () => {
 
             .then((rensponse)=>{
                 setSuccess(rensponse?.data?.message)
-                console.log(rensponse)
+                // console.log(rensponse)
                 setLoading(false)
 
 
@@ -57,9 +58,8 @@ const Signup = () => {
         {success && <div className='success'>{success}</div>}
         {/* return rensponse for failure  */}
         {failure && <div className='failure'>{failure}</div>}
-
-      <h1>Lab Signup Page</h1>
      <form onSubmit={handleSignup} className=' card shadow p-3 pt-4'>
+        <h1>Register Lab</h1>
                 <div className="form-group">
                     {/* <label htmlFor="labName">Lab Name</label> */}
                     <input
@@ -116,6 +116,7 @@ const Signup = () => {
                     />
                 </div>
                 <button type="submit">Sign Up</button>
+                <Link to="/signin">Already have an Account, Login</Link>
             </form>
             {name}
             <br />

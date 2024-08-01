@@ -1,9 +1,14 @@
 import React from 'react'
 import './maincontent.css'
 import Layout from '../layout/Layout'
+import CheckSession from '../../helpers/CheckSession'
+import axiosInstance from '../../helpers/axiosInstance'
+
 
 
 const MainContent = () => {
+  // check if user is logged in using check session 
+  const {lab_name, lab_id, access_token} = CheckSession();
   return (
     <div>
     <Layout/>
@@ -14,7 +19,7 @@ const MainContent = () => {
       <div className="row">
         <div className="col-md-4">
           <div className="card shadow p-4"> Creative
-            {/* card body  */}
+            
             <div className="card-body">
               Smart 
             </div>
@@ -25,7 +30,7 @@ const MainContent = () => {
         <div className="col-md-4">
           <div className="card shadow p-4">
             Affordable
-            {/* card body  */}
+            
            <div className="card-body">
               Less Pay 
             </div>
@@ -45,6 +50,7 @@ const MainContent = () => {
       </div>
 
     </section>
+   
     </div>
   )
 }
