@@ -14,19 +14,19 @@ const AddTests = () => {
                             {loading && <div className="text-warning"> Please Wait..</div>}
                             {success && <div className="text-success"> {success}</div>}
                             {failure && <div className="text-danger"> {failure}</div>}
-                            <input type="text" placeholder="Enter Test Name" value={test_name}
+                            <input type="text" placeholder="Enter Test Name" value=''
                                 onChange={(e) => setName(e.target.value)} required
                                 className="form-control" /> <br />
                                 
-                            <input type="text" placeholder="Enter Test Desc" value={test_description}
+                            <input type="text" placeholder="Enter Test Desc" value=''
                                 onChange={(e) => setDescription(e.target.value)} required
                                 className="form-control" /> <br />
                                 
-                            <input type="text" placeholder="Enter Test Cost" value={test_cost}
+                            <input type="text" placeholder="Enter Test Cost" value=''
                                 onChange={(e) => setCost(e.target.value)} required
                                 className="form-control" /> <br />
                                 
-                            <input type="text" placeholder="Enter Test Discount" value={test_discount}
+                            <input type="text" placeholder="Enter Test Discount" value=''
                                 onChange={(e) => setDiscount(e.target.value)} required
                                 className="form-control" /> <br />
                 
