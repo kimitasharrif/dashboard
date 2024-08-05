@@ -16,14 +16,14 @@ const Signin = () => {
     setLoading(true);
 
    
-      axiosInstance.post('/labsignin', {
+    axiosInstance.post('/labsignin', {
         email: email,
         password: password,
       })
       .then((response)=>{
       // setSuccess(response?.data?.message);
       // console.log(response.data)
-      setFailure(null);
+      // setFailure(null);
       setLoading(false)
       // handle the response 
       if(response?.data && response?.data?.access_token && response?.data?.message){
@@ -33,6 +33,7 @@ const Signin = () => {
         localStorage.setItem("lab_name",response?.data?.message?.lab_name)
         localStorage.setItem("email",response?.data?.message?.email)
         localStorage.setItem("permit_id",response?.data?.message?.permit_id)
+        localStorage.setItem("phone",response?.data?.message?.phone)
         localStorage.setItem("access_token",response?.data?.access_token)
         localStorage.setItem("reg_date", response?.data?.message?.reg_date)
 
@@ -99,3 +100,8 @@ const Signin = () => {
 };
 
 export default Signin;
+
+
+
+
+

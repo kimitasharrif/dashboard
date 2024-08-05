@@ -1,16 +1,18 @@
-import axios from "axios";
-// retrieve accs token fro local storage
-const access_token = localStorage.getItem("access_token");
-// console.log(access_token)
-const axiosInstanceToken = axios.create({
-    baseURL : "https://advance.pythonanywhere.com/api",
-    timeout: 20000,
-    headers : {
-        //incase you have access token its here
-    "Content-Type":"application/json",
-    "Authorization":`Bearer ${access_token}`
-    },
+// Import axios
+import axios from 'axios';
 
+// Retrieve the access token from localStorage
+const access_token = localStorage.getItem("access_token");
+
+// Create an axios instance
+const axiosInstance = axios.create({
+  baseURL: 'https://advance.pythonanywhere.com/api', // Replace with your API's base URL
+  timeout: 30000, // Adjust the timeout as needed (in milliseconds)
+  headers: {
+    'Content-Type': 'application/json', // Set the default content type for requests
+    'Authorization': `Bearer ${access_token}` // Provide access_token as Bearer
+  },
 });
 
-export default axiosInstanceToken
+// Export the axios instance
+export default axiosInstance;

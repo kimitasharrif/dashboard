@@ -25,12 +25,13 @@ const AddTests = () => {
             setFailure(null)
             console.log("submitting")
             //Post and Post data using axiosInstance with Token
-            axiosInstanceToken.post('/addlabtests', {
+            axiosInstanceToken.post('/addtests', {
                 lab_id: lab_id,
                 test_name: test_name,
                 test_description: test_description,
                 test_cost: test_cost,
-                test_discount: test_discount
+                test_discount: test_discount,
+                
             })
                 .then(function (response) {
                     console.log(response.data);
@@ -62,20 +63,23 @@ const AddTests = () => {
                             {success && <div className="text-success"> {success}</div>}
                             {failure && <div className="text-danger"> {failure}</div>}
                             <input type="text" placeholder="Enter Test Name" value={test_name}
-                                onChange={(e) => setName(e.target.value)} required
+                            id='test_name'
+                                onChange={(e) => setName(e.target.value)} required  
                                 className="form-control" /> <br />
                                 
                             <input type="text" placeholder="Enter Test Desc" value={test_description}
-                                onChange={(e) => setDescription(e.target.value)} required
+                                onChange={(e) => setDescription(e.target.value)} required   id='test_description'
                                 className="form-control" /> <br />
                                 
                             <input type="text" placeholder="Enter Test Cost" value={test_cost}
-                                onChange={(e) => setCost(e.target.value)} required
+                                onChange={(e) => setCost(e.target.value)} required   id='test_cost'
                                 className="form-control" /> <br />
                                 
                             <input type="text" placeholder="Enter Test Discount" value={test_discount}
-                                onChange={(e) => setDiscount(e.target.value)} required
+                                onChange={(e) => setDiscount(e.target.value)} required   id='test_discount'
                                 className="form-control" /> <br />
+
+                        
                 
                                 
                             <button className="btn btn-dark">Add Test</button>

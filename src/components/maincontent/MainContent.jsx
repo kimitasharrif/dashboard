@@ -17,7 +17,7 @@ const MainContent = () => {
     <section className="container">
       <h1>Dashboard</h1>
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-3">
           <div className="card shadow p-4"> Creative
             
             <div className="card-body">
@@ -27,7 +27,7 @@ const MainContent = () => {
 
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-3">
           <div className="card shadow p-4">
             Affordable
             
@@ -38,7 +38,7 @@ const MainContent = () => {
 
 
         </div>
-        <div className="col-md-4">
+        <div className="col-md-3">
           <div className="card shadow p-4">
             Efficient
             <div className="card-body">

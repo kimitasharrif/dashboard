@@ -11,8 +11,13 @@ import { FaBook } from "react-icons/fa";
 import { MdOutlinePersonAddAlt1 } from "react-icons/md";
 import { RiLogoutBoxLine } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
+import ReactLogout from '../../helpers/Logout';
+import CheckSession from '../../helpers/CheckSession';
 
 const SideBar = () => {
+    const { lab_name,  lab_id, access_token } = CheckSession();
+
+  const  {logout} = ReactLogout()
   return (
     <section className='sidebar'>
   {/* // links */}
@@ -44,7 +49,7 @@ const SideBar = () => {
   </div>
   {/* logout division */}
  <div className="p-4 sidebar-logout">
-      <button className="btn btn-dark btn-sm"><RiLogoutBoxLine/> Log Out</button>
+      <button className="btn btn-dark btn-sm" onClick={logout}><RiLogoutBoxLine/> Log Out</button>
 
  </div>
   </section>
