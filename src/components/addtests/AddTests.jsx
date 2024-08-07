@@ -54,8 +54,8 @@ const AddTests = () => {
     <div>
     <Layout/>
 
-<div className='form'>
-    <form onSubmit={submit}  className="card shadow p-4">
+<div className='single'>
+    <form onSubmit={submit}  className="card shadow p-4 mb-4" >
       <h1>AddTests</h1>
 
                         <div className="card-body">

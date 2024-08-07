@@ -13,6 +13,22 @@ const LabTests = () => {
       const [labtests, setLabTests] = useState([]);
       const [failure, setFailure] = useState(null);
 
+      //filter data
+      const [filterdata, setFilterData] = useState([])
+
+      //searchh query
+      const [query, setQuery] = useState('')
+
+      //function to handle live search
+      const handleSearch =(value)=>{
+        // the value is the text that yyou are typing 
+        setQuery(value)
+        // check if lab test are not empty 
+        const filterResult = labtests && labtests.filter((item)=> item.test_name.toLowerCase().includes(value.toLowerCase()))
+        // update set Filtered data with teh filterd items 
+        setFilterData(filterResult)
+      }
+
 useEffect(() => {
     setLoading(true);
     axiosInstanceToken
@@ -22,6 +38,7 @@ useEffect(() => {
     .then((response) => {
     // console.log(response.data)
     setLabTests(response.data);
+    setFilterData(response.data);
     // console.log(labtests)
     setLoading(false);
 })
@@ -36,12 +53,13 @@ if (loading) {
   // console.log(labtests)
 
 return (
-<div>
+<div >
 <Layout />
 
  <div className="card-container">
    {loading && <p className="text-warning">Loading ... </p>}
         {failure && <p className="text-danger">Error occurred. Try later.</p>}
+        <input type="text" placeholder="Search lab tests" className="form-control mb-0" value={query} onChange={(e)=>handleSearch(e.target.value)}/>
         {labtests?.length > 0 ? (
       <table className="table table-striped bg-light p-5 m-1">
         <thead>
@@ -53,7 +71,7 @@ return (
           </tr>
         </thead>
         <tbody>
-          {labtests?.map((test, index) => (
+          {filterdata?.map((test, index) => (
             <tr className="mt-5" key={index}>
               <td>{test.test_name}</td>
               <td>{test.test_description}</td>

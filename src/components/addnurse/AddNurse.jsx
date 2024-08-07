@@ -4,6 +4,7 @@ import Layout from '../layout/Layout'
 import CheckSession from '../../helpers/CheckSession'
 import axiosInstanceToken from '../../helpers/axiosInstanceToken'
 import './addnurse.css'
+import '../../index.css'
 
 
 const AddNurses = () => {
@@ -61,7 +62,7 @@ const AddNurses = () => {
     return (
         <div>
                 <Layout/>
-                <div className="form">
+                <div className="form" >
                     <form onSubmit={submit} className="card shadow p-4">
                         <div className="card-body">
                                 {loading  && <div className="text-warning"> Please Wait..</div>}

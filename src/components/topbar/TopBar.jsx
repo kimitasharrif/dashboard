@@ -20,7 +20,7 @@ const TopBar = () => {
       {/* right hand side */}
    <div className="topbar-content">
     
-    <div className="p-4 sidebar-refresh">
+    <div className="topbar_icon">
       <button className="btn btn-light btn-sm" ><IoMdRefresh/></button>
       {/* onClick={refresh} */}
       </div>

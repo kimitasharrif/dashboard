@@ -1,3 +1,6 @@
+
+  
+
 .card-container {
   display: flex;
   flex-direction: column;
@@ -8,22 +11,23 @@
   margin-left: 20%;
   margin-top: 60px;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
+  overlay: none;
 
 }
+.form-control{
+  top: 70px;
+  bottom: 0px;
+}
 
-/* .card {
-  width: 65%;
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-} */
 
-table {
-  width: 80%;
+
+ table {
+  width: 75%;
   border-collapse: collapse;
   margin-left: 20%;
-  margin-top: 60px;
+  margin-right: 0%;
+  margin-top: 100px;
 
  
 }
@@ -53,3 +57,34 @@ tr:hover {
 .p-4 {
   padding: 16px;
 }
+
+
+
+
+/* .form {
+    width: 75%;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 2%;
+    margin-top: 50px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .text-warning, .form .text-danger, .form .text-info {
+    margin-top: 10px;
+} */

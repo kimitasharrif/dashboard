@@ -1,5 +1,6 @@
 import React from 'react'
-import './maincontent.css'
+import '../labtests/labtests.css'
+import '../../index.css'
 import Layout from '../layout/Layout'
 import CheckSession from '../../helpers/CheckSession'
 import axiosInstance from '../../helpers/axiosInstance'
@@ -14,7 +15,7 @@ const MainContent = () => {
     <Layout/>
 
 
-    <section className="container">
+    <section className="card-container">
       <h1>Dashboard</h1>
       <div className="row">
         <div className="col-md-3">
